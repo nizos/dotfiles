@@ -201,7 +201,7 @@ bindsym Print exec --no-startup-id "deepin-screen-recorder"
 exec --no-startup-id xfce4-clipman
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill /home/nizos/Documents/Pictures/Wallpapers/Nordic.png
+exec --no-startup-id feh --bg-fill $HOME/git/dotfiles/wallpapers/Nordic.png
 
 # Nitrogen
 # exec_always --no-startup-id nitrogen --restore &
