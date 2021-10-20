@@ -1,0 +1,25 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim:
+    ~/.config/i3:
+    ~/.config/picom:
+    ~/.config/i3status-rust:
+    ~/.config/alacritty.yml:
+    ~/.config/user-dirs.dirs:
+    ~/.bashrc:
+    ~/.config/git:
+    ~/.bash_profile:
+    ~/.prettierrc.js:
+
+- create:
+    - ~/downloads
+    - ~/documents
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
