@@ -1,0 +1,51 @@
+font:
+  normal:
+    family: JetBrainsMono
+    style: regular
+  bold:
+    family: JetBrainsMono
+    style: bold
+  italic:
+    family: JetBrainsMono
+    style: italic
+  bold_italic:
+    family: JetBrainsMono
+    style: bold italic
+  size: 10
+
+window:
+  opacity: 0.9
+
+# Colors (Ayu Mirage)
+colors:
+  # Cursor colors
+  cursor:
+    text: '0x1A1F29'
+    cursor: '0xCBCCC6'
+
+  # Default colors
+  primary:
+    background: '0x1F2430'
+    foreground: '0xCBCCC6'
+
+  # Normal colors
+  normal:
+    black:   '0x00000A'
+    red:     '0xF07177'
+    green:   '0xC1D94B'
+    yellow:  '0xFFB453'
+    blue:    '0x39B9E6'
+    magenta: '0xA37ACC'
+    cyan:    '0x6993BF'
+    white:   '0xCBCCC6'
+
+  # Bright colors
+  bright:
+    black:   '0x252B39'
+    red:     '0xF28779'
+    green:   '0xBAE67D'
+    yellow:  '0xFFD580'
+    blue:    '0x59C2FF'
+    magenta: '0xD3BFFF'
+    cyan:    '0x76A8D9'
+    white:   '0xFFFFFF'
