@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Name: audio_output_switch
+
+function get_available_sinks() {
+        pacmd_available=$(pacmd list-sinks | sed -n -e 's/^.* index: //p')
+        echo "$pacmd_available"
+}
+
+function get_active_sink() {
+	pacmd_active=$(pacmd list-sinks | sed -n -e 's/^.* \* index: //p')
+	echo "$pacmd_active"
+}
+
+function get_last_sink() {
+        pacmd_last=$(pacmd list-sinks | sed -n -e 's/^.* index: //p' | tail -n 1)
+        echo "$pacmd_last"
+}
+
+function set_active_sink() {
+	new_index=$1
+	pacmd_set=$(pacmd set-default-sink $new_index)
+        $pacmd_set
+}
+
+function set_sink_next() {
+	active_sink=$(get_active_sink)
+	last_sink=$(get_last_sink)
+
+	if [[ "$active_sink" -ge "$last_sink" ]]; then
+		set_active_sink 0
+	else
+		active_sink=$((++active_sink))
+		set_active_sink "$active_sink"
+	fi
+}
+
+set_sink_next
+
