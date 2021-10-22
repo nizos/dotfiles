@@ -16,10 +16,12 @@
     ~/.config/git:
     ~/.bash_profile:
     ~/.prettierrc.js:
+    ~/.scripts: scripts
 
 - create:
     - ~/downloads
     - ~/documents
+    - ~/.scripts
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
