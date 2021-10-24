@@ -17,6 +17,10 @@
     ~/.bash_profile:
     ~/.prettierrc.js:
     ~/.scripts: scripts
+    ~/.config/xfce4:
+    ~/.config/xournalpp:
+    ~/.config/Thunar:
+    ~/.config/rofi:
 
 - create:
     - ~/downloads

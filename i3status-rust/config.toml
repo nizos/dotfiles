@@ -44,6 +44,11 @@ format = "{weather} {temp}"
 service = { name = "openweathermap", units = "metric" }
 
 [[block]]
+block = "keyboard_layout"
+driver = "localebus"
+format = "\uf11c {layout}"
+
+[[block]]
 block = "time"
 interval = 1
 format = "\uf073 %A %d %m %Y   \uf017 %R"
