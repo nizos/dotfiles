@@ -4,6 +4,15 @@ file = "/home/nizos/.config/i3status-rust/themes/ayu_mirage.toml"
 name = "awesome5"
 [icons.overrides]
 time = ""
+microphone_muted = ""
+microphone_empty = ""
+microphone_half = ""
+microphone_full = ""
+volume_muted = ""
+volume_empty = ""
+volume_half = ""
+volume_full = ""
+headphones = ""
 
 [[block]]
 block = "disk_space"
@@ -35,22 +44,24 @@ block = "sound"
 format = "{output_name} {volume}"
 on_click = "bash ~/.scripts/audio_output_switch"
 [block.mappings]
-"alsa_output.usb-Kingston_HyperX_Cloud_Flight_Wireless_Headset-00.analog-stereo" = "Headphones"
-"alsa_output.pci-0000_00_1f.3.analog-stereo" = "Stereo"
+"alsa_output.usb-Kingston_HyperX_Cloud_Flight_Wireless_Headset-00.analog-stereo" = "\uf025"
+"alsa_output.pci-0000_00_1f.3.analog-stereo" = "\uf028"
 
 [[block]]
 block = "weather"
-format = "{weather} {temp}"
+format = "{temp}"
 service = { name = "openweathermap", units = "metric" }
 
 [[block]]
 block = "keyboard_layout"
-driver = "localebus"
+driver = "setxkbmap"
+interval = 1
 format = "\uf11c {layout}"
+on_click = "bash ~/.scripts/keyboard_layout_switch"
 
 [[block]]
 block = "time"
 interval = 1
-format = "\uf073 %A %d %m %Y   \uf017 %R"
+format = "\uf073 %a %Y-%m-%d %R"
 
 

@@ -237,7 +237,7 @@ bar {
 # 	#font pango: JetBrainsMono 11
 #	#position bottom
 #
-	font pango:DejaVu Sans Mono, FontAwesome 10
+	font pango:DejaVu Sans Mono, Font Awesome 5 Free 10
 	position bottom
 	i3bar_command i3bar -t
 	status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml

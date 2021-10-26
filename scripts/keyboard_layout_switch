@@ -2,32 +2,27 @@
 
 # Name: keyboard_layout_switch
 
-function get_active_layout() {
-	xkb_active=$(setxkbmap -query | grep layout | sed -n -e 's/^.*layout:     //p')
-	echo "xkb_active"
+function get_current_layout() {
+	xkb_current=$(setxkbmap -query | grep layout | sed -n -e 's/^.*layout:     //p')
+	echo "$xkb_current"
 }
 
-function get_last_sink() {
-        pacmd_last=$(pacmd list-sinks | sed -n -e 's/^.* index: //p' | tail -n 1)
-        echo "$pacmd_last"
+function set_current_layout() {
+	new_layout=$1
+	xkb_set=$(setxkbmap $new_layout)
+        $xkb_set
 }
 
-function set_active_sink() {
-	new_index=$1
-	pacmd_set=$(pacmd set-default-sink $new_index)
-        $pacmd_set
-}
+function set_next_layout() {
+	current_layout=$(get_current_layout)
 
-function set_sink_next() {
-	active_sink=$(get_active_sink)
-	last_sink=$(get_last_sink)
-
-	if [[ "$active_sink" -ge "$last_sink" ]]; then
-		set_active_sink 0
+	if [[ "$current_layout" == "us" ]]; then
+		set_current_layout "se"
+	elif [[ "$current_layout" == "se" ]]; then
+		set_current_layout "ara"
 	else
-		active_sink=$((++active_sink))
-		set_active_sink "$active_sink"
+		set_current_layout "us"
 	fi
 }
 
-set_sink_next
+set_next_layout

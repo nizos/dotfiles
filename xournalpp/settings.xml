@@ -13,7 +13,7 @@
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
   <property name="mainWndWidth" value="1920"/>
-  <property name="mainWndHeight" value="1080"/>
+  <property name="mainWndHeight" value="1059"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
@@ -59,7 +59,7 @@
   <property name="drawDirModsRadius" value="50"/>
   <property name="snapRotation" value="true"/>
   <property name="snapRotationTolerance" value="0.30000000"/>
-  <property name="snapGrid" value="true"/>
+  <property name="snapGrid" value="false"/>
   <property name="snapGridTolerance" value="0.50000000"/>
   <property name="snapGridSize" value="14.17000000"/>
   <property name="touchDrawing" value="false"/>
@@ -75,7 +75,7 @@
   <property name="preloadPagesAfter" value="5"/>
   <property name="eagerPageCleanup" value="true"/>
   <!--Config for new pages-->
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundColor=#ffffff&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=graph&#10;backgroundColor=#ffffffff&#10;"/>
   <property name="sizeUnit" value=""/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -98,14 +98,14 @@
   <property name="inputSystemDrawOutsideWindow" value="true"/>
   <property name="preferredLocale" value=""/>
   <property name="stabilizerAveragingMethod" value="2"/>
-  <property name="stabilizerPreprocessor" value="1"/>
+  <property name="stabilizerPreprocessor" value="0"/>
   <property name="stabilizerBuffersize" value="20"/>
-  <property name="stabilizerSigma" value="0.50000000"/>
+  <property name="stabilizerSigma" value="1.50000000"/>
   <property name="stabilizerDeadzoneRadius" value="1.00000000"/>
-  <property name="stabilizerDrag" value="0.40000000"/>
-  <property name="stabilizerMass" value="1.50000000"/>
+  <property name="stabilizerDrag" value="1.00000000"/>
+  <property name="stabilizerMass" value="1.00000000"/>
   <property name="stabilizerCuspDetection" value="true"/>
-  <property name="stabilizerFinalizeStroke" value="true"/>
+  <property name="stabilizerFinalizeStroke" value="false"/>
   <property name="latexSettings.autoCheckDependencies" value="true"/>
   <property name="latexSettings.globalTemplatePath" value="/usr/share/xournalpp/resources/default_template.tex"/>
   <property name="latexSettings.genCmd" value="pdflatex -halt-on-error -interaction=nonstopmode '{}'"/>
@@ -160,6 +160,7 @@
       <attribute name="deviceSource" type="int" value="0"/>
     </data>
   </data>
+  <data name="lastUsedPageBgColor"/>
   <data name="tools">
     <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
