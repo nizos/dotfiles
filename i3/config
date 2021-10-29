@@ -20,7 +20,7 @@ set $right l
 # gaps
 for_window [class=".*"] border pixel 2
 gaps inner 4
-gaps outer 2
+gaps outer 4
 smart_gaps on
 smart_borders on
 # new_window none
@@ -31,7 +31,7 @@ font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -197,7 +197,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Autotiling
-exec_always --no-startup-id autotiling
+# exec_always --no-startup-id autotiling
 
 # Screenshot
 bindsym Print exec --no-startup-id "deepin-screen-recorder"
@@ -206,7 +206,7 @@ bindsym Print exec --no-startup-id "deepin-screen-recorder"
 exec --no-startup-id xfce4-clipman
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill $HOME/git/dotfiles/wallpapers/Nordic.png
+exec --no-startup-id feh --bg-fill $HOME/git/dotfiles/wallpapers/21262e.png
 
 # Nitrogen
 # exec_always --no-startup-id nitrogen --restore &
@@ -215,9 +215,9 @@ exec --no-startup-id feh --bg-fill $HOME/git/dotfiles/wallpapers/Nordic.png
 exec --no-startup-id picom -CGb --config ~/.config/picom/picom.conf --experimental-backends --backend glx --xrender-sync-fence
 
 
-set $accent-color        #8fbcbb88
-set $bg-color 	         #434c5e
-set $inactive-bg-color   #3b4252
+set $accent-color        #5e81ac
+set $bg-color 	         #1F2430
+set $inactive-bg-color   #1F2430
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #b48ead
@@ -237,8 +237,8 @@ bar {
 # 	#font pango: JetBrainsMono 11
 #	#position bottom
 #
-	font pango:DejaVu Sans Mono, Font Awesome 5 Free 10
-	position bottom
+        font pango:DejaVu Sans Mono, Font Awesome 5 Free 9
+        position bottom
 	i3bar_command i3bar -t
 	status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
 	colors {

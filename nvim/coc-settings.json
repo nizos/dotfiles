@@ -1,0 +1,7 @@
+{
+  "diagnostic.errorSign": "✘",
+  "diagnostic.infoSign": "ℹ",
+  "diagnostic.hintSign": "➤",
+  "diagnostic.enableHighlightLineNumber": true
+}
+

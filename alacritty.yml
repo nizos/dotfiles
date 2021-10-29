@@ -1,19 +1,19 @@
 shell:
-  program: /bin/bash
+  program: /usr/bin/zsh
   args:
-    - --login
+   - --login
 font:
   normal:
-    family: JetBrainsMono
+    family: "JetBrainsMono Nerd Font"
     style: regular
   bold:
-    family: JetBrainsMono
+    family: "JetBrainsMono Nerd Font"
     style: bold
   italic:
-    family: JetBrainsMono
+    family: "JetBrainsMono Nerd Font"
     style: italic
   bold_italic:
-    family: JetBrainsMono
+    family: "JetBrainsMono Nerd Font"
     style: bold italic
   size: 10
 
